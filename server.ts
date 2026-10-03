@@ -9,11 +9,9 @@ createServer(function (request, response) {
         response.end(JSON.stringify({ status: 'ok'}));
         return;
     }
-
-
- Response.writeHead(
+ response.writeHead(
     404,
     {'content-type': 'aplication/json'}
  );
- Response.end(JSON.stringify({ message: 'recurso não encontrado'}))
-}).lisen(3000);
+ response.end(JSON.stringify({ message: 'recurso não encontrado'}))
+}).listen(3000);
