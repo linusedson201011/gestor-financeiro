@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>gefina</title>
+  </head>
+  <body>
+    <div></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" >
+    const container = document.querySelector('div');
+
+    const root = ReactDOM.createRoot(container);
+
+    const invoices: Invoice[] = [{
+        amount: 125037,
+        id: 1,
+    status: 'pending',
+    issueDate: '2026-09-25',
+    dueDate: '2026-10-20',
+    customer: {
+    id: 7,
+    name: 'Construtora Meridiano',
+    email: 'comercial@meridiano.com.br'
+    }
+    }, {
+    id: 2,
+    amount: 35000,
+    status: 'paid',
+    issueDate: '2026-10-01',
+    dueDate: '2026-10-31',
+    customer: {
+    id: 4,
+    name: 'Gráfica Nova',
+    email: 'grafica@nova.com.br'
+    }
+    }, {
+    id: 3,
+    amount: 1836988,
+    status: 'pending',
+    issueDate: '2026-10-20',
+    dueDate: '2026-11-25',
+    customer: {
+    id: 15,
+    name: 'Tenditudo',
+    email: 'comercial@tenditudo.com.br'
+    }
+    }];
+
+    const InvoiceTitle = () => {
+        return <h1>Faturas</h1>;
+    };
+
+    const InvoiceTable = () =>{
+        return(
+            <table>
+        <thead>
+            <tr>
+                <th>cliente</th>
+                <th>valor</th>
+                <th>emissão</th>
+                <th>vencimento</th>
+                <th>situação</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+        );
+    };
+
+   const App = () => {
+    return <>
+        <InvoiceTitle/>
+        <InvoiceTable/>
+    </>;
+   };
+
+    root.render(<App/>);   
+    </script>
+  </body>
+</html>
