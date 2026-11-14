@@ -2,7 +2,7 @@
   "name": "gefina",
   "version": "0.0.0",
   "description": "Sistema de gestão de contas a receber.",
-  "author": "Alex Bessa",
+  "author": "Linus",
   "scripts": {
     "check": "biome check ./",
     "fix": "biome check --write ./",
